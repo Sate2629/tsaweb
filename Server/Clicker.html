@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Money Clicker</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="stylesheet" type="text/css" href="https://website-design-sate2629.c9users.io/Server/Clicker.css">
+        <link rel="shortcut icon" href="/Server/favicon (3).ico" type="image/x-icon">
+        <link rel="icon" href="/Server/favicon (3).ico" type="image/x-icon">
+    </head>
+    <body>
+        <h1>Money</h1>
+        <p id="Coins"></p>
+        <p id="CoinPS"></p>
+        <div class="button" type="button" onclick="gainMoney();">Money</div>
+        <br>
+        <h2 id="Shop Price"></h2>
+        <div class="button" type="button" onclick="buyShop();">Buy Krispy Kreme</div>
+        <br>
+        <h2 id="DepStore Price"></h2>
+        <div class="button" type="button" onclick="buyDepStore();">Buy Thrift Shop</div>
+        <br>
+        <h2 id="CostCoPrice"></h2>
+        <div class="button" type="button" onclick="buyCostCo();">Buy Home Depot</div>
+        <h2 id="NES classic price"></h2>
+        <div class="button" type="button" onclick="buyNES();">Buy Bootleg Nintendo</div>
+        <br>
+        <h2 id="CakeLie"></h2>
+        <div class="button" type="button" onclick="buyCake();">The Cake is a Lie</div>
+        <br>
+        <h2 id="CecilsSwitch"></h2>
+        <div class="button" type="button" onclick="buySwitch();">Buy Cecil a Switch (preferably with 1-2 Switch)</div>
+
+    <script>
+    var money = 0;
+    var moneyPC = 1;
+    var moneyPS = 0;
+    var sPrice = 50;
+    var DSprice = 200;
+    var CCprice = 500;
+    var NESprice = 1000;
+    var cakePrice = 600;
+    var switchPrice = 300;
+    
+    document.addEventListener('mousedown', function (event) {
+    if (event.detail > 1) {
+    event.preventDefault();
+        }   
+    }, false);
+    
+    function gainMoney() {
+        money += moneyPC;
+    }
+    
+    setInterval (function render() {
+        document.getElementById("Coins").innerHTML = "$" + money;
+        document.getElementById("Shop Price").innerHTML = "Krispy Kreme Price: $" + sPrice;
+        document.getElementById("CostCoPrice").innerHTML = "Sam's Club price: $" + CCprice;
+        document.getElementById("DepStore Price").innerHTML = "Thrift Shop Price: $" + DSprice;
+        document.getElementById("NES classic price").innerHTML = "Bootleg Nintendo: $" + NESprice;
+        document.getElementById("CakeLie").innerHTML = "Cake Price: $" + cakePrice;
+        document.getElementById("CoinPS").innerHTML = "Dollars per second: " + moneyPS;
+        document.getElementById("CecilsSwitch").innerHTML = "Buy Cecil A Switch Price: $" + switchPrice;
+    })
+    
+    setInterval (function gainMoney() {
+        money += moneyPS;
+    }, 1000);
+    
+    function buyShop() {
+        if(money >= sPrice) {
+            money -= sPrice;
+            moneyPS += 1;
+            sPrice += 5;
+            render();
+        }
+        else {
+            alert("Not Enough Money, Try clicking some more!")
+        }
+    }
+    function buyDepStore() {
+        if(money >= DSprice) {
+            money -= DSprice;
+            moneyPS += 5;
+            DSprice += 10;
+        }
+        else {
+            alert("Not Enough Money, Try clicking some more!")
+        }
+    }
+    
+    function buyCostCo() {
+        if(money >= CCprice) {
+            money -= CCprice;
+            moneyPS += 15;
+            CCprice += 10;
+        }
+        else {
+            alert("Not Enough Money, Try clicking some more!")
+        }
+    }
+    
+    function buyNES() {
+        if(money >= NESprice) {
+            money -= NESprice;
+            moneyPS += 20;
+            NESprice += 15;
+        }
+        else {
+            alert("Not Enough Money, Try clicking some more!")
+        }
+    }
+    
+    function buyCake() {
+        if(money >= cakePrice) {
+            window.location.reload(false); 
+
+        }
+        else {
+            alert("Not Enough Money, Try clicking some more!")
+        }
+    }
+    
+    function buySwitch() {
+        if(money >= switchPrice) {
+            money -= switchPrice;
+            moneyPS += 100;
+            switchPrice += 3000;
+        }
+        else {
+            alert("Not Enough Money, Try clicking some more!")
+        }
+    }
+    
+    
+    </script>
+    </body>
+    
+    <style>
+        h1 {
+            color: white;
+            font-size: 300%;
+            font-family: helvetica;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        body {
+        background-color: #78a3af;
+        }
+        
+        p {
+            font-size: 30;
+            color: black;
+            font-family: arial;
+            text-align: center;
+            font-weight: bold;
+        }
+        .btnPlaceOrder {
+            height:20px; 
+            width: 300px;
+            cursor: pointer;
+            text-align: center;
+            background-color: #68829e;
+            padding: 20px 12px;
+            border: none;
+            margin: auto;
+            font-size: 15;
+            color: white;
+            border-radius: 12px;
+            transition-duration: 0.4s;
+        }
+        .button {
+            height:20px; 
+            width: 300px;
+            cursor: pointer;
+            text-align: center;
+            background-color: #68829e;
+            padding: 20px 12px;
+            border: none;
+            margin: auto;
+            font-size: 15;
+            color: white;
+            border-radius: 12px;
+            transition-duration: 0.4s;
+            
+        }
+        .button:hover {
+            background-color: #144aa0; 
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+            
+        
+        h2 {
+            color: black;
+            font-size: 20;
+            font-family: courier;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: 25;
+            color: white;
+            font-family: courier;
+            text-align: center;
+        }
+        
+        p2 {
+            font-size: 20;
+            color: black;
+            font-family: arial;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</html>

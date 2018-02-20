@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Caletas Proxy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset='utf-8'>
+  <meta name="flattr:id" content="jjydv5">
+
+  <!-- header font -->
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+  <style type="text/css">
+
+
+    body {
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.72222;
+      color: #34495e;
+      background-color: #ffffff;
+      margin: 0 0 0 0;
+    }
+
+
+    h1 {
+     color:white;
+     font-family: "Helvetica neue", Arial, sans-serif;
+     letter-spacing: 0.1px;
+     font-weight: bolder;
+     font-size: 150px;
+     margin: 0px 0 -70px -10px;
+     text-align: center;
+   }
+
+   h2 {
+    font-weight: 700;
+    display: inline;
+    font-size: 37px;
+  }
+
+  a {
+    color: #d35400;
+
+    text-decoration: none;
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+  }
+  a:hover,
+  a:focus {
+    color: #e67e22;
+    text-decoration: none;
+  }
+
+
+  header {
+    background: #e51f25;
+  }
+
+  img {
+
+    padding: 30px;
+  }
+
+
+  nav {
+    background: #efefef;
+    text-align: center;
+    margin: 0;
+    padding: 5px 0 5px 0;
+  }
+
+
+  .caleta-head {
+    padding: 25px 0 25px 0;
+    text-align: center;
+  }
+
+  .caleta-logo {
+    width: 100%;
+    padding: 0 0 10px;
+  }
+
+  .caleta-tagline {
+    font-weight: 100;
+    color: #efefef;
+    font-size: 16pt;
+    margin: 0;
+  }
+
+  .link-menu {
+    color: black;
+  }
+
+
+  .ul-menu {
+    margin: 0 0 0 -25px;
+
+  }
+  .li-menu {
+    display: inline;
+    list-style: none;
+    padding: 10px 20px 10px 0;
+  }
+
+
+
+  .lead {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 1.46428571;
+    font-weight: 300;
+  }
+
+  .secciones {
+    position: inherit;
+    margin: 0;
+    padding: 40px 60px 30px 60px;
+  }
+
+  .secciones:hover {
+    background: #f9f9f9;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  .secciones-no-hover {
+    position: inherit;
+    margin: 0;
+    padding: 60px 60px 30px 60px;
+  }
+
+  .seccion-uno:hover {
+
+    /*  background: #3498DB;*/
+    /*  border-top: 1px solid #95A5A6;*/
+  }
+
+
+
+}
+.seccion-dos{
+  /*  background: #2ECC71;*/
+  /*    border-top: 1px solid #95A5A6;*/
+}
+
+.seccion-tres {
+  /*  background: #E67E22;*/
+  /*    border-top: 1px solid #95A5A6;*/
+}
+
+
+.comentarios {
+  padding: 60px;
+}
+
+.notification {
+  padding: 30px 0;
+  background: #ffdc24;
+  text-align: center;
+  font-size: 16px;
+  line-height: 0.8;
+}
+
+.notification-hidden {
+  display: none;
+}
+
+.tagline {
+  font-weight: 100;
+  color: #efefef;
+  font-size: 16pt;
+  margin: 0;
+}
+
+.main {
+  background:#e51f25;
+  color: white;
+  padding: 1px 30px 30px 30px;
+  text-align: center;
+}
+
+.busqueda {
+  width: 100%;
+  text-align: center;
+  margin: -10px 0 40px 0;
+}
+
+#error {
+  border:1px dotted white;
+  background: brown;
+  display: none;
+  padding: 5px 10px;
+  margin: 30px 10px;
+}
+
+input[type=text] {
+  width: 450px;
+  height: 21px;
+  border:none;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.button {
+  border: none;
+  background: #3c3e3d;
+  height: 30px;
+  width: 50px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  -webkit-appearance: none;
+}
+
+.explicacion {
+  padding: 0px 80px 10px 80px;
+
+  font-size: 14pt;
+  text-align: center;
+}
+
+
+
+
+.footer {
+  margin: 40px auto 0 auto;
+  width: 550px;
+  text-align: center;
+  font-size:10px;
+  padding: 0 0 0 0;
+  color: gray;
+  font-weight: 300;
+}
+
+
+@media(max-width: 700px) {
+  h1 {
+    font-size: 90px;
+    margin-bottom: -40px;
+  }
+
+
+  .tagline {
+    font-size: 17px;
+    padding: 0 20px;
+  }
+  p {
+    line-height: 1.2;
+  }
+  .busqueda {
+    padding: 1px 0 0 0;
+  }
+
+  input[type=text] {
+    width: 70%;
+    font-size: 16px;
+  }
+  .explicacion {
+    width: 100%;
+    padding: 0;
+
+  }
+  .explicacion p {
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .footer {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0 10px 0;
+  }
+  .footer p{
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+
+}
+
+@media(max-width: 340px) {
+  h1 {
+    font-size: 70px;
+    margin: 0 0 -40px 0;
+
+  }
+
+  p {
+    font-size: 20px;
+    margin: 30px 0 0px 0;
+  }
+  .busqueda {
+    margin: -20px 0 15px 0;
+  }
+.explicacion {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin: 0 0 0 0;
+
+  }
+  input[type=text] {
+    width: 75%;
+    font-size: 16px;
+  }
+  .button {
+    width: 30px;
+    font-style: 16px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+</style>
+
+<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"light-bottom"};
+</script>
+
+<script type="text/javascript" src="//s3.amazonaws.com/cc.silktide.com/cookieconsent.latest.min.js"></script>
+<!-- End Cookie Consent plugin -->
+
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="main">
+      <header>
+        <h1>caletas</h1>
+        <h2>proxy</h2>
+      </header>
+      <p class="tagline">El conocimiento es libertad; accede a ambos.</p>
+      <h3><strong>¿Cuál página bloqueada quieres ver hoy?</strong></h3>
+
+      <div class="busqueda">
+
+        <div id="error"></div>
+
+        <form action="/proxy/no-js" method="get" id="unblocker-form">
+          <p>
+            <input type="text" id="url" name="url" placeholder="URL" autofocus="autofocus" />
+            <input type="submit" class="button" value="IR" />
+          </p>
+
+        </form>
+      </div>
+
+    </div>
+
+    <div class="notification">
+      <p>Ayúdanos a cubrir los costos del servidor donando desde $1 en <a href="https://www.patreon.com/caletas">Patreon</a></p>
+      <p>También nos puedes ayudar enviando Bitcoins a esta dirección: 3MQNtLj1kqyRVdY9FLG1g7TkGtcfQkrgkM</p>
+    </div>
+
+
+      <div class="footer">
+        <p>Caletas usa <a href="https://bit.ly/1hCkvA8">Node Unblocker</a>, un <a href="https://bit.ly/1h8r24N">proxy</a> web que permite evadir filtros y acceder a sitios bloqueados.</p>
+        <p>El código fuente de Node Unblocker está <a href="https://bit.ly/1LvfBl1">disponible en Github.</p>
+        <p></a>
+          <a href="https://bit.ly/1hCkvA8">Node Unblocker</a> v{version} by <a href="https://bit.ly/1U97XfC" title="Node.js developer and JavaScript Expert">Nathan Friedly</a></p>
+        </div>
+
+
+      </div>
+      <script>
+        function $(id){
+         return document.getElementById(id);
+       }
+
+       var l = window.location
+
+       var baseUrl = l.hostname == "nodeunblocker.com" ?
+       "https://node-unblocker.herokuapp.com/proxy/" :
+       l.protocol + '//' +  l.host + '/proxy/';
+
+       $('unblocker-form').onsubmit = function(){
+         var url = $('url').value;
+         if(url.substr(0,4) != "http"){
+          url = "http://" + url;
+        }
+        window.location = baseUrl + url;
+        return false;
+      }
+
+      function checkError(){
+       var search = window.location.search;
+       var start = search.indexOf('error=');
+       if(start > -1){
+        var stop = search.indexOf('&', start);
+        if(stop == -1){ stop = undefined; }
+				// +6 for "error="
+				var err = search.substr(start+6, stop);
+				$('error').innerText = $('error').textContent = decodeURIComponent(err);
+				$('error').style.display = "block";
+			}
+		}
+
+		window.onload = function() {
+			$('url').focus();
+			checkError();
+		}
+	</script>
+
+
+</body>
+</html>
