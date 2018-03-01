@@ -1,0 +1,85 @@
+<!DOCTYPEhtml>
+<head>
+    <meta charset=utf-8>
+    <title id="Stime">Google search : NULL</title>
+    <link rel="icon" type="image/png" href="/Tab/nexus2cee_Search-Thumb.png"/>
+</head>
+
+<body>
+<div class="sBar">  
+    <form action="http://www.google.com/search">
+        <label for=q></label>
+        <input type=text name=q size="34" id=q placeholder="" er43>
+        <input type="hidden" name="ie" value="utf-8">
+        <input type="hidden" name="oe" value="utf-8">
+    
+    </form>
+    <div id="Clock" class="ClockTime"></div>
+</div>
+</body>
+<script>
+
+function Clock () {
+    var dte = new Date;
+    var hour = dte.getHours();
+    var min = dte.getMinutes();
+    var sec = dte.getSeconds();
+    var msec = dte.getMilliseconds();
+    var ap;
+
+    if (hour==0){
+        ap="+";
+        hour=12;
+    }
+    else if (hour<12){
+        ap="+";
+    }
+    else if (hour == 12) {
+        ap="-";
+    }
+    else if (hour>12) {
+        ap="-";
+        hour-=12;
+    }
+
+    if (min<=9) {
+        min="0"+min;
+    }
+    document.getElementById("Clock").innerHTML=ap+""+hour+":"+min+" | "+sec+"";
+    document.getElementById("Stime").innerHTML="Google Search : "+ap+""+hour+":"+min;
+}
+window.onload=function() {
+    Clock();
+    setInterval(Clock,1000);
+}
+
+</script>
+
+
+<style>
+    
+    body {
+        background-color: #3e4247;
+    }
+    .sBar {
+        display: block;
+        text-align: center;
+    }
+    input[type=text] {
+        padding: 12px 20px;
+        font-size: 16px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 10px solid black;
+        background-color: #3e4247;
+        
+        
+    }
+    
+    .ClockTime {
+        font-family: "Arial Black", Gadget, sans-serif;
+        font-size: 40px;
+    }
+</style>
+
